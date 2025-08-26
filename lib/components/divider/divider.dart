@@ -98,18 +98,29 @@ abstract class AppDividerBase extends StatelessWidget {
     );
   }
   //工厂构造函数，便捷创建带标签的分割线
-  // factory AppDividerBase.label({
-  //   TextStyle? textStyle,
-  //   required String label,
-  //   AppDividerDirections direction = AppDividerDirections.horizontal,
-  //   AppDividerStyles style = AppDividerStyles.solid,
-  //   double? thickness,
-  //   double? indent,
-  //   double? endIndent,
-  //   AppDividerColors color = AppDividerColors.mydefault,
-  // }) {
-  //   return LabelDivider(
-  //     //传递参数
-  //   );
-  // }
+  factory AppDividerBase.label({
+    TextStyle? textStyle,
+    required String label,
+    double? value,
+    AppDividerDirections direction = AppDividerDirections.horizontal,
+    AppDividerStyles style = AppDividerStyles.solid,
+    double? thickness,
+    double? indent,
+    double? endIndent,
+    AppDividerColors color = AppDividerColors.mydefault,
+  }) {
+    return LabelDivider(
+      label: label,
+      labelStyle: textStyle,
+      value: value,
+      direction: direction,
+      style: style,
+      thickness: thickness,
+      indent: indent,
+      endIndent: endIndent,
+      color: color,
+
+      //传递参数
+    );
+  }
 }
