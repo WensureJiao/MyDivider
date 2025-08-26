@@ -6,11 +6,13 @@ import 'normal_divider.dart';
 class LabelDivider extends AppDividerBase {
   final String label; //标签
   final TextStyle? labelStyle; //标签样式
+  final double? padding; //标签和线的间距
 
   const LabelDivider({
     Key? key,
     required this.label,
     this.labelStyle,
+    this.padding,
     double? value,
     AppDividerDirections direction = AppDividerDirections.horizontal,
     AppDividerStyles style = AppDividerStyles.solid,
@@ -52,8 +54,8 @@ class LabelDivider extends AppDividerBase {
         ),
         Padding(
           padding: newdirection == Axis.horizontal
-              ? const EdgeInsets.symmetric(horizontal: 8.0)
-              : const EdgeInsets.symmetric(vertical: 8.0),
+              ? EdgeInsets.symmetric(horizontal: padding ?? 8.0)
+              : EdgeInsets.symmetric(vertical: padding ?? 8.0),
           child: Text(
             label,
             style: labelStyle ?? TextStyle(color: getColor(context)),

@@ -44,6 +44,7 @@ class DividerApp extends StatelessWidget {
               AppDividerBase.label(
                 label: 'Section 1',
                 textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                padding: 3.0,
                 style: AppDividerStyles.solid,
                 thickness: 1.0,
                 color: AppDividerColors.danger,

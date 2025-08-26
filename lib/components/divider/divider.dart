@@ -101,6 +101,7 @@ abstract class AppDividerBase extends StatelessWidget {
   factory AppDividerBase.label({
     TextStyle? textStyle,
     required String label,
+    double? padding,
     double? value,
     AppDividerDirections direction = AppDividerDirections.horizontal,
     AppDividerStyles style = AppDividerStyles.solid,
@@ -112,6 +113,7 @@ abstract class AppDividerBase extends StatelessWidget {
     return LabelDivider(
       label: label,
       labelStyle: textStyle,
+      padding: padding,
       value: value,
       direction: direction,
       style: style,
