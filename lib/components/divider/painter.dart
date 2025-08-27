@@ -6,12 +6,23 @@ import 'package:flutter/material.dart';
 import 'divider.dart';
 
 class AppDividerPainter extends CustomPainter {
-  final AppDividerStyles style; //样式
-  final double thickness; //粗细
-  final AppDividerDirections direction; //方向
-  final Color color; //颜色
-  final double indent; //起始缩进
-  final double endIndent; //结束缩进
+  ///样式
+  final AppDividerStyles style;
+
+  ///粗细
+  final double thickness;
+
+  ///方向
+  final AppDividerDirections direction;
+
+  ///颜色
+  final Color color;
+
+  ///起始缩进
+  final double indent;
+
+  ///结束缩进
+  final double endIndent;
 
   AppDividerPainter({
     required this.style,

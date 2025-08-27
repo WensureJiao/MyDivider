@@ -4,26 +4,17 @@ import 'package:flutter/material.dart';
 import 'divider.dart';
 import 'painter.dart';
 
-class NormalDivider extends AppDividerBase {
+class NormalDivider extends AppDivider {
   const NormalDivider({
-    Key? key,
-    double? value,
-    AppDividerDirections direction = AppDividerDirections.horizontal,
-    AppDividerStyles style = AppDividerStyles.solid,
-    double? thickness,
-    double? indent,
-    double? endIndent,
-    AppDividerColors color = AppDividerColors.mydefault,
-  }) : super(
-         key: key,
-         value: value,
-         direction: direction,
-         style: style,
-         thickness: thickness,
-         indent: indent,
-         endIndent: endIndent,
-         color: color,
-       );
+    super.key,
+    super.value,
+    super.direction = AppDividerDirections.horizontal,
+    super.style = AppDividerStyles.solid,
+    super.thickness,
+    super.indent,
+    super.endIndent,
+    super.color = AppDividerColors.defaultColor,
+  });
 
   @override
   Widget build(BuildContext context) {

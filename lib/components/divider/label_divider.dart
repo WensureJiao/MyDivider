@@ -3,33 +3,29 @@ import 'package:flutter/material.dart';
 import 'divider.dart';
 import 'normal_divider.dart';
 
-class LabelDivider extends AppDividerBase {
-  final String label; //标签
-  final TextStyle? labelStyle; //标签样式
-  final double? padding; //标签和线的间距
+class LabelDivider extends AppDivider {
+  ///标签
+  final String label;
+
+  ///标签样式
+  final TextStyle? labelStyle;
+
+  ///标签和线的间距
+  final double? padding;
 
   const LabelDivider({
-    Key? key,
+    super.key,
     required this.label,
     this.labelStyle,
     this.padding,
-    double? value,
-    AppDividerDirections direction = AppDividerDirections.horizontal,
-    AppDividerStyles style = AppDividerStyles.solid,
-    double? thickness,
-    double? indent,
-    double? endIndent,
-    AppDividerColors color = AppDividerColors.mydefault,
-  }) : super(
-         key: key,
-         value: value,
-         direction: direction,
-         style: style,
-         thickness: thickness,
-         indent: indent,
-         endIndent: endIndent,
-         color: color,
-       );
+    super.value,
+    super.direction = AppDividerDirections.horizontal,
+    super.style = AppDividerStyles.solid,
+    super.thickness,
+    super.indent,
+    super.endIndent,
+    super.color = AppDividerColors.defaultColor,
+  });
 
   @override
   Widget build(BuildContext context) {
